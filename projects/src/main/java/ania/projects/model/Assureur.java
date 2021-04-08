@@ -10,7 +10,7 @@ public class Assureur extends Utilisateur {
 
 	public Assureur() {
 		// TODO Auto-generated constructor stub
-	}
+	} 
 	
 
 }

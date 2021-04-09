@@ -1,9 +1,11 @@
 package ania.projects.model;
 
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,6 +14,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import lombok.Data;
 
@@ -23,6 +27,16 @@ public class Consultation {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	protected long id;
+	
+	@Column(nullable = false)
+	private String typeconsultation; 
+	
+	@Column(nullable = false)
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date dateConsultation; 
+	
+	
+	private String detailConsultation; 
 	
 	
 	@ManyToOne

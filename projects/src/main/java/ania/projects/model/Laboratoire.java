@@ -24,7 +24,6 @@ public class Laboratoire {
 	@JoinTable(name = "facture_analyses",
 	joinColumns  = {@JoinColumn(name ="laboratoire_id_Fk" , referencedColumnName = "id")},
 	inverseJoinColumns = {@JoinColumn (name = "analyse_id_Fk", referencedColumnName = "id")})
-	
 	private Set<Analyse> analyses;
 
 	public Laboratoire() {

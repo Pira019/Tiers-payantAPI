@@ -10,11 +10,7 @@ import lombok.Data;
 @Entity
 @Data
 public class Facture_consultation extends Facture {
-
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	protected long id;
 	
 	public Facture_consultation() {
 		// TODO Auto-generated constructor stub
